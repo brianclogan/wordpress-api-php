@@ -5,8 +5,7 @@ namespace Darkgoldblade01\Wordpress;
 use Throwable;
 
 /**
- * Class NotFoundException
- * @package Darkgoldblade01\WordpressApi
+ * Class NotFoundException.
  */
 class NotFoundException extends \Exception
 {
@@ -16,7 +15,7 @@ class NotFoundException extends \Exception
      * @param int $code
      * @param Throwable|null $previous
      */
-    public function __construct($message = "", $code = 0, Throwable $previous = null)
+    public function __construct($message = '', $code = 0, Throwable $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }
@@ -29,12 +28,8 @@ class NotFoundException extends \Exception
         parent::__toString();
     }
 
-    /**
-     *
-     */
     public function __wakeup()
     {
         parent::__wakeup();
     }
-
 }

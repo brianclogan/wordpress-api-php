@@ -3,12 +3,10 @@
 namespace Darkgoldblade01\Wordpress\Models;
 
 /**
- * Class Model
- * @package Darkgoldblade01\WordpressApi\Models
+ * Class Model.
  */
 class Theme
 {
-
     /**
      * Fill the Model with
      * the data from the array.
@@ -19,17 +17,18 @@ class Theme
      */
     public function fill(array $data): Model
     {
-        foreach($data AS $key => $value) {
-            if($key === 'url') {
+        foreach ($data as $key => $value) {
+            if ($key === 'url') {
                 continue;
             }
             $this->{$key} = $value;
         }
+
         return $this;
     }
 
     /**
-     * Convert the Model to an array
+     * Convert the Model to an array.
      *
      * @return array
      */
@@ -39,7 +38,7 @@ class Theme
     }
 
     /**
-     * Up to Date
+     * Up to Date.
      *
      * Checks the version of the current plugin vs. the
      * version supplied and returns true or false.
@@ -52,11 +51,10 @@ class Theme
      */
     public function upToDate($version): bool
     {
-        if(version_compare($this->version, $version, '>=')) {
+        if (version_compare($this->version, $version, '>=')) {
             return true;
         } else {
             return false;
         }
     }
-
 }

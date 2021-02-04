@@ -9,7 +9,7 @@ class ModelTest extends TestCase
 {
     protected $data = [
         'test' => 'yes',
-        'test_2' => 'no'
+        'test_2' => 'no',
     ];
 
     /** @test */
@@ -17,7 +17,7 @@ class ModelTest extends TestCase
     {
         $model = new Model();
         $model->fill($this->data);
-        foreach($this->data AS $key => $value) {
+        foreach ($this->data as $key => $value) {
             $this->assertSame($model->{$key}, $value);
         }
     }

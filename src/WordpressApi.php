@@ -13,9 +13,8 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class WordpressApi
 {
-
     /**
-     * Base URI
+     * Base URI.
      *
      * The base URI for the API.
      *
@@ -28,9 +27,10 @@ class WordpressApi
      */
     private $client;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->client = new Client([
-            "base_uri" => $this->base_uri,
+            'base_uri' => $this->base_uri,
         ]);
     }
 
@@ -88,9 +88,10 @@ class WordpressApi
      * @return mixed
      * @throws GuzzleException
      */
-    protected function get($endpoint = null, $json_decode = true) {
+    protected function get($endpoint = null, $json_decode = true)
+    {
         $response = $this->client->get($endpoint);
-        if($json_decode) {
+        if ($json_decode) {
             return json_decode($response->getBody()->getContents(), true);
         } else {
             return $response->getBody()->getContents();

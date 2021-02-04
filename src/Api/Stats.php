@@ -4,48 +4,51 @@ namespace Darkgoldblade01\Wordpress\Api;
 
 use Darkgoldblade01\Wordpress\WordpressApi;
 
-class Stats extends WordpressApi {
-
+class Stats extends WordpressApi
+{
     protected $base_uri = 'https://api.wordpress.org/stats/';
 
     /**
-     * Wordpress
+     * Wordpress.
      *
      * Returns the stats for Wordpress.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function wordpress() {
+    public function wordpress()
+    {
         return $this->get('wordpress/1.0');
     }
 
     /**
-     * PHP
+     * PHP.
      *
      * Returns the stats for PHP.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function php() {
+    public function php()
+    {
         return $this->get('php/1.0');
     }
 
     /**
-     * MySQL
+     * MySQL.
      *
      * Returns the stats for MySQL.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function mysql() {
+    public function mysql()
+    {
         return $this->get('mysql/1.0');
     }
 
     /**
-     * Plugin
+     * Plugin.
      *
      * Returns the stats for a Plugin.
      *
@@ -53,12 +56,13 @@ class Stats extends WordpressApi {
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function plugin(string $slug) {
-        return $this->get('plugin/1.0/' . $slug);
+    public function plugin(string $slug)
+    {
+        return $this->get('plugin/1.0/'.$slug);
     }
 
     /**
-     * Downloads
+     * Downloads.
      *
      * Returns the download stats for a Plugin.
      *
@@ -67,7 +71,8 @@ class Stats extends WordpressApi {
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function plugin_downloads(string $slug, int $days) {
-        return $this->get('plugin/1.0/downloads.php?slug=' . $slug . '&limit=' . $days);
+    public function plugin_downloads(string $slug, int $days)
+    {
+        return $this->get('plugin/1.0/downloads.php?slug='.$slug.'&limit='.$days);
     }
 }
