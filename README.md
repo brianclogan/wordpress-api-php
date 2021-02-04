@@ -1,7 +1,7 @@
 # Wordpress API Wrapper in PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/darkgoldblade01/wordpress-api-php.svg?style=flat-square)](https://packagist.org/packages/darkgoldblade01/wordpress-api-php)
-[![Build Status](https://img.shields.io/travis/com/darkgoldblade01/wordpress-api-php-php/master.svg?style=flat-square)](https://travis-ci.com/darkgoldblade01/wordpress-api-php-php)
+[![Build Status](https://img.shields.io/travis/com/darkgoldblade01/wordpress-api-php/master.svg?style=flat-square)](https://travis-ci.com/darkgoldblade01/wordpress-api-php)
 [![Quality Score](https://img.shields.io/scrutinizer/g/darkgoldblade01/wordpress-api-php-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/darkgoldblade01/wordpress-api-php-php)
 [![Total Downloads](https://img.shields.io/packagist/dt/darkgoldblade01/wordpress-api-php-php.svg?style=flat-square)](https://packagist.org/packages/darkgoldblade01/wordpress-api-php-php)
 
