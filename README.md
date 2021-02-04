@@ -18,7 +18,16 @@ composer require darkgoldblade01/wordpress-api-php
 ## Usage
 
 ``` php
-        
+$wordpressApi = new WordpressApi();
+
+// Core Information
+$wordpressApi->core();
+
+// Plugin Information
+$wordpressApi->plugin();
+
+// Theme Information
+$wordpressApi->theme(); 
 ```
 
 ### Testing
