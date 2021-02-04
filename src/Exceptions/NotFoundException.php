@@ -19,17 +19,4 @@ class NotFoundException extends \Exception
     {
         parent::__construct($message, $code, $previous);
     }
-
-    /**
-     * @return string|void
-     */
-    public function __toString()
-    {
-        parent::__toString();
-    }
-
-    public function __wakeup()
-    {
-        parent::__wakeup();
-    }
 }
