@@ -5,13 +5,18 @@ php:
   - 7.4
   - 8.0
 
+env:
+  matrix:
+#    - COMPOSER_FLAGS="--prefer-lowest"
+    - COMPOSER_FLAGS=""
+
 before_script:
   - travis_retry composer self-update
-  - travis_retry composer install --no-interaction --prefer-source
+  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
   - phpenv config-add tests/php.ini
 
 script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
 after_script:
-  - php vendor/bin/ocular code-coverage:upload --format=php-clover --access-token="$OCULAR_ACCESS_TOKEN" coverage.clover
+  - php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover

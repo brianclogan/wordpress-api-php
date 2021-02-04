@@ -1,6 +1,6 @@
 <?php
 
-namespace Darkgoldblade01\Wordpress;
+namespace Darkgoldblade01\Wordpress\Exceptions;
 
 use Throwable;
 

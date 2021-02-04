@@ -4,10 +4,18 @@ namespace Darkgoldblade01\Wordpress\Tests;
 
 use Darkgoldblade01\Wordpress\Api\Plugin as PluginApi;
 use Darkgoldblade01\Wordpress\Models\Plugin;
+use Darkgoldblade01\Wordpress\WordpressApi;
 use PHPUnit\Framework\TestCase;
 
 class PluginTest extends TestCase
 {
+    /** @test */
+    public function static_function_test()
+    {
+        $api = WordpressApi::plugin();
+        $this->assertTrue(is_a($api, PluginApi::class));
+    }
+
     /** @test */
     public function search()
     {
