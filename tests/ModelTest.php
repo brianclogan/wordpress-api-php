@@ -1,8 +1,8 @@
 <?php
 
-namespace Darkgoldblade01\Dnd5eApi\Tests;
+namespace Darkgoldblade01\Wordpress\Tests;
 
-use Darkgoldblade01\Dnd5eApi\Models\Model;
+use Darkgoldblade01\Wordpress\Models\Model;
 use PHPUnit\Framework\TestCase;
 
 class ModelTest extends TestCase

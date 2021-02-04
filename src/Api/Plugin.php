@@ -2,6 +2,7 @@
 
 namespace Darkgoldblade01\Wordpress\Api;
 
+use Darkgoldblade01\Wordpress\Models\Plugin as PluginModel;
 use Darkgoldblade01\Wordpress\WordpressApi;
 
 class Plugin extends WordpressApi {
@@ -13,23 +14,26 @@ class Plugin extends WordpressApi {
      *
      * Returns the information for the plugin.
      *
-     * @param $slug string  The slug of the plugin you want to pull
+     * @param string $slug  The slug of the plugin you want to pull
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function info(string $slug) {
-        return $this->get('info/' . $slug . '.json');
+    public function info(string $slug): PluginModel
+    {
+        $info = $this->get('info/1.2/?action=plugin_information&request[slug]=' . $slug);
+        return (new PluginModel())->fill($info);
     }
 
     /**
-     * JSON
+     * Info
      *
-     * Returns the JSON for the current Wordpress Version.
+     * Returns the information for the plugin.
      *
+     * @param string $search
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function json() {
-        return $this->get('version-check/1.7');
+    public function search(string $search) {
+        return $this->get('info/1.2/?action=query_plugins&request[search]=' . $search);
     }
 }
