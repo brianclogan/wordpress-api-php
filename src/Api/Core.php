@@ -4,14 +4,14 @@ namespace Darkgoldblade01\Wordpress\Api;
 
 use Darkgoldblade01\Wordpress\WordpressApi;
 
-class Version extends WordpressApi {
+class Core extends WordpressApi {
 
     protected $base_uri = 'https://api.wordpress.org/core/';
 
     /**
      * PHP Serialized
      *
-     * Returns the PHP Serialized version of the current Wordpress Version.
+     * Returns the PHP Serialized version of the current Wordpress Core.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -23,7 +23,7 @@ class Version extends WordpressApi {
     /**
      * JSON
      *
-     * Returns the JSON for the current Wordpress Version.
+     * Returns the JSON for the current Wordpress Core.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -35,7 +35,7 @@ class Version extends WordpressApi {
     /**
      * JSON
      *
-     * Returns the JSON for the current Wordpress Version.
+     * Returns the JSON for the current Wordpress Core.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException

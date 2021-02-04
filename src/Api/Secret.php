@@ -9,7 +9,7 @@ class Secret extends WordpressApi {
     protected $base_uri = 'https://api.wordpress.org/secret-key/';
 
     /**
-     * Version 1.0
+     * Core 1.0
      *
      * Returns the version 1.0 definitions.
      *
@@ -21,7 +21,7 @@ class Secret extends WordpressApi {
     }
 
     /**
-     * Version 1.1
+     * Core 1.1
      *
      * Returns the version 1.1 definitions.
      *
@@ -33,7 +33,7 @@ class Secret extends WordpressApi {
     }
 
     /**
-     * Version 1.1 Salt
+     * Core 1.1 Salt
      *
      * Returns the version 1.1 salt definitions.
      *

@@ -11,7 +11,7 @@ class Translation extends WordpressApi {
     /**
      * PHP Serialized
      *
-     * Returns the PHP Serialized version of the current Wordpress Version.
+     * Returns the PHP Serialized version of the current Wordpress Core.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -23,7 +23,7 @@ class Translation extends WordpressApi {
     /**
      * JSON
      *
-     * Returns the JSON for the current Wordpress Version.
+     * Returns the JSON for the current Wordpress Core.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -35,7 +35,7 @@ class Translation extends WordpressApi {
     /**
      * JSON
      *
-     * Returns the JSON for the current Wordpress Version.
+     * Returns the JSON for the current Wordpress Core.
      *
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException

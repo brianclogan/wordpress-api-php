@@ -2,6 +2,12 @@
 
 namespace Darkgoldblade01\Wordpress;
 
+use Darkgoldblade01\Wordpress\Api\Core;
+use Darkgoldblade01\Wordpress\Api\Plugin;
+use Darkgoldblade01\Wordpress\Api\Secret;
+use Darkgoldblade01\Wordpress\Api\Stats;
+use Darkgoldblade01\Wordpress\Api\Theme;
+use Darkgoldblade01\Wordpress\Api\Translation;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -26,6 +32,54 @@ class WordpressApi
         $this->client = new Client([
             "base_uri" => $this->base_uri,
         ]);
+    }
+
+    /**
+     * @return Core
+     */
+    public static function core(): Core
+    {
+        return new Core();
+    }
+
+    /**
+     * @return Plugin
+     */
+    public static function plugin(): Plugin
+    {
+        return new Plugin();
+    }
+
+    /**
+     * @return Secret
+     */
+    public static function secret(): Secret
+    {
+        return new Secret();
+    }
+
+    /**
+     * @return Stats
+     */
+    public static function stats(): Stats
+    {
+        return new Stats();
+    }
+
+    /**
+     * @return Theme
+     */
+    public static function theme(): Theme
+    {
+        return new Theme();
+    }
+
+    /**
+     * @return Translation
+     */
+    public static function translation(): Translation
+    {
+        return new Translation();
     }
 
     /**
