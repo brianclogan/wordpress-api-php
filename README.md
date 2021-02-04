@@ -12,7 +12,7 @@ This package is a PHP wrapper for the [Wordpress.org API](https://codex.wordpres
 You can install the package via composer:
 
 ```bash
-composer require darkgoldblade01/wordpress-api
+composer require darkgoldblade01/wordpress-api-php
 ```
 
 ## Usage
